@@ -19,6 +19,7 @@ Route::get('/login','UserController@showLoginForm')->name('login');
 Route::post('/login','UserController@login')->name('login.submit');
 
 Route::get('/register','UserController@register')->name('register');
+Route::post('/register','UserController@registerPost')->name('register.post');
 
 Route::post('/upload','UserController@upload')->name('upload');
 
