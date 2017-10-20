@@ -33,9 +33,9 @@ class UserController extends BaseController
         $user = DB::table('users')->where('email', $email)->first();
 
       if (Hash::check($password, $user->password)) {
-
+            return redirect('/home');
       }
-      return redirect('welcome');
+        return redirect('/');
     }
 
 
@@ -69,8 +69,12 @@ class UserController extends BaseController
       }
       return view('login');
 
-
-
     }
+
+    public function index()
+    {
+        return view('home');
+    }
+    
 
 }

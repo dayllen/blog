@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', 'UserController@index');
 
 Route::get('/login','UserController@showLoginForm')->name('login');
 Route::post('/login','UserController@login')->name('login.submit');
